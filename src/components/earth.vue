@@ -206,6 +206,7 @@ function drawEarth() {
   top: 0;
   z-index: 0;
   position: absolute;
+  color: #00800015;
 }
 
 .star1 {

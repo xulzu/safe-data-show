@@ -37,7 +37,7 @@ function setChart() {
         inside: true,
       },
       z: 2,
-      data: lineData.map((item) => item.time),
+      data: lineData().map((item) => item.time),
     },
     yAxis: {
       type: "value",
@@ -85,7 +85,7 @@ function setChart() {
         animation: false,
 
         smooth: true,
-        data: lineData.map((item) => item.value),
+        data: lineData().map((item) => item.value),
         lineStyle: {
           width: 1,
           color: {

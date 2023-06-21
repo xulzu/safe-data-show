@@ -94,17 +94,19 @@ export const mapData = [
     value: 100,
   },
 ];
-export const lineData = [
-  ...Mock.mock({
-    "arr|10": [
-      {
-        time: "@date",
-        value: "@natural(40,70)",
-        // value: "100",
-      },
-    ],
-  }).arr,
-].sort((a, b) => (a.time <= b.time ? -1 : 1));
+export const lineData = () => {
+  return [
+    ...Mock.mock({
+      "arr|10": [
+        {
+          time: "@date",
+          value: "@natural(40,70)",
+          // value: "100",
+        },
+      ],
+    }).arr,
+  ].sort((a, b) => (a.time <= b.time ? -1 : 1));
+};
 
 export const pieData = [
   //
