@@ -147,13 +147,13 @@ span {
   display: inline-block;
   color: #6eddf1;
   height: 18px;
-  padding: 7px;
+  padding: 8px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-image: url("../assets/方形 (27).png");
   background-repeat: no-repeat;
-  background-position: -3px 0px;
-  background-size: 101% 90%;
+  // background-position: -5px 0px;
+  background-size: 100% 90%;
 
   .title-text {
     position: relative;
@@ -168,9 +168,9 @@ span {
   width: 25%;
 }
 .typewriterNotice {
-  background-image: url("../assets/方形 (365).png");
-  background-size: 125% 120%;
-  background-position: -45px -20px;
+  background-image: url("../assets/方形.png");
+  background-size: 120% 118%;
+  background-position: 40% 10%;
 }
 .realTimeAttackIPScroll {
   position: relative;
