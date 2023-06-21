@@ -70,18 +70,10 @@ import scrollTable from "./scrollTable.vue";
 .tableItem {
   position: relative;
 }
-.tableItem:nth-child(2n)::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-size: 110% 100%;
-  background-position: -20px -2px;
-  // opacity: 0.8;
+.tableItem:nth-child(2n) {
+  background-size: 120% 115%;
   background-repeat: no-repeat;
-  background-image: url("../assets/方形 (210).png");
+  background-image: url("../assets/tablebkg.png");
 }
 .contentItem {
   // padding: 4px;

@@ -39,7 +39,7 @@ function setMap() {
   let option = {
     geo: {
       zoom: 1.3,
-      map: "china",
+      map: "world1",
       roam: false,
       itemStyle: {
         areaColor: "#2043AA",

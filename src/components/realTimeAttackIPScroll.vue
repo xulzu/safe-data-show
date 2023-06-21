@@ -60,10 +60,10 @@ import { realTimeAttackData } from "./mock";
         top: 0;
         width: 100%;
         height: 100%;
-        background-size: 110% 100%;
-        background-position: -40px -2px;
+        background-size: 110% 110%;
+        background-position: -10px 0px;
         background-repeat: no-repeat;
-        background-image: url("../assets/方形 (210).png");
+        background-image: url("../assets/tablebkg.png");
       }
     }
   }

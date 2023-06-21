@@ -152,7 +152,7 @@ span {
   transform: translate(-50%, -50%);
   background-image: url("../assets/方形 (27).png");
   background-repeat: no-repeat;
-  background-position: -2px 0px;
+  background-position: -3px 0px;
   background-size: 101% 90%;
 
   .title-text {
@@ -169,8 +169,8 @@ span {
 }
 .typewriterNotice {
   background-image: url("../assets/方形 (365).png");
-  background-size: 123% 120%;
-  background-position: -30px -10px;
+  background-size: 125% 120%;
+  background-position: -45px -20px;
 }
 .realTimeAttackIPScroll {
   position: relative;

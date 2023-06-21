@@ -223,14 +223,16 @@ function setChart() {
       .easing(TWEEN.Easing.Linear.None)
       .repeat(Infinity)
       .onUpdate(() => {
-        myChart.setOption({
-          series: [
-            {
-              name: "hightLightPoniter",
-              animation: false,
-              data: pieData.map((item) => Math.min(item.value, coords.x)),
-            },
-          ],
+        requestAnimationFrame(() => {
+          myChart.setOption({
+            series: [
+              {
+                name: "hightLightPoniter",
+                animation: false,
+                data: pieData.map((item) => Math.min(item.value, coords.x)),
+              },
+            ],
+          });
         });
       })
       .start();
