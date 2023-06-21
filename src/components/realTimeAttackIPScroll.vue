@@ -44,14 +44,27 @@ import { realTimeAttackData } from "./mock";
     list-style: none;
     padding: 0;
     margin: 0 auto;
-    li,
-    a {
+    li {
       display: block;
       height: 30px;
       line-height: 30px;
       display: flex;
+      padding: 0 10px;
       justify-content: space-between;
       font-size: 15px;
+      position: relative;
+      &:nth-child(2n + 1)::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 110% 100%;
+        background-position: -40px -2px;
+        background-repeat: no-repeat;
+        background-image: url("../assets/方形 (210).png");
+      }
     }
   }
 }

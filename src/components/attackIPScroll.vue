@@ -67,9 +67,21 @@ import scrollTable from "./scrollTable.vue";
     }
   }
 }
-.tableItem:nth-child(2n-1) {
-  border-radius: 5px;
-  box-shadow: 0 0 10px 0 #3d91cf inset;
+.tableItem {
+  position: relative;
+}
+.tableItem:nth-child(2n)::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 110% 100%;
+  background-position: -20px -2px;
+  // opacity: 0.8;
+  background-repeat: no-repeat;
+  background-image: url("../assets/方形 (210).png");
 }
 .contentItem {
   // padding: 4px;
@@ -88,5 +100,8 @@ import scrollTable from "./scrollTable.vue";
   text-align: left;
   color: #6eddf1;
   font-weight: 400;
+}
+.test {
+  color: #2988a8;
 }
 </style>

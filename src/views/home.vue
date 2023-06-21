@@ -34,7 +34,10 @@
 
         <chinaMap></chinaMap>
       </div>
-      <div style="width: 100%; height: calc(40% - 60px)">
+      <div
+        class="realTimeAttackIPScroll"
+        style="width: 100%; height: calc(40% - 60px)"
+      >
         <realTimeAttackIPScroll></realTimeAttackIPScroll>
       </div>
     </span>
@@ -72,7 +75,7 @@
         <span class="angle4"></span>
         <rowBar></rowBar>
       </div>
-      <div class="right1" style="height: 27%; width: 100%">
+      <div class="right1 typewriterNotice" style="height: 27%; width: 100%">
         <span class="angle1"></span>
         <span class="angle2"></span>
         <span class="angle3"></span>
@@ -143,23 +146,46 @@ span {
   position: absolute;
   display: inline-block;
   color: #6eddf1;
-  border: 2px solid #6eddf1;
   height: 18px;
-  padding: 0 2px;
+  padding: 7px;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-image: url("../assets/方形 (27).png");
+  background-repeat: no-repeat;
+  background-position: -2px 0px;
+  background-size: 101% 90%;
 
   .title-text {
     position: relative;
-    line-height: 23px;
     font-size: 16px;
-    background: #151456;
     display: inline-block;
     padding: 0px 4px;
+
     transform: translateY(-2px);
   }
 }
 .cirle {
   width: 25%;
+}
+.typewriterNotice {
+  background-image: url("../assets/方形 (365).png");
+  background-size: 123% 120%;
+  background-position: -30px -10px;
+}
+.realTimeAttackIPScroll {
+  position: relative;
+}
+.realTimeAttackIPScroll::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/圆形 (185).png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.3;
 }
 </style>

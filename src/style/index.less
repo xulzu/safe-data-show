@@ -41,6 +41,20 @@
   border-bottom: 1px solid #1c5ab3;
   border-right: 1px solid #1c5ab3;
 }
+.angle1,
+.angle2,
+.angle3,
+.angle4 {
+  animation: angleAnimate 3s infinite;
+}
+@keyframes angleAnimate {
+  50% {
+    border-color: #4fd2dd;
+  }
+  100% {
+    border-color: #1c5ab3;
+  }
+}
 .chart-title {
   display: inline-block;
   color: #6eddf1;

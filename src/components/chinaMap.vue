@@ -10,6 +10,7 @@ import wordtest from "../assets/world.json";
 import getDistance from "../utils/getDistance";
 const geoData = mapData.filter(
   (item) =>
+    true ||
     getDistance(item.from[0], item.from[1], item.to[0], item.to[1]) > 3000
 );
 
@@ -38,7 +39,7 @@ function setMap() {
   let option = {
     geo: {
       zoom: 1.3,
-      map: "world1",
+      map: "china",
       roam: false,
       itemStyle: {
         areaColor: "#2043AA",
@@ -50,6 +51,32 @@ function setMap() {
       },
 
       silent: true,
+      regions: [
+        {
+          name: "美国",
+          label: {
+            show: true,
+            color: "#6eddf1",
+          },
+          itemStyle: {
+            areaColor: "#2988a8",
+            shadowColor: "#033a4d",
+            borderColor: "#1b03f4",
+          },
+        },
+        {
+          name: "加拿大",
+          label: {
+            show: true,
+            color: "#6eddf1",
+          },
+          itemStyle: {
+            areaColor: "#2088aa",
+            shadowColor: "#033a4d",
+            borderColor: "#1b03f4",
+          },
+        },
+      ],
     },
     tooltip: {
       show: true,
@@ -69,7 +96,7 @@ function setMap() {
         itemHeight: 50,
         // orient: "horizontal",
         inRange: {
-          color: ["#fff", "yellow", "green", "#c618e6", "red"],
+          color: ["#fff", "yellow", "orange", "#2088aa", "#c618e6", "red"],
           symbolSize: 5,
         },
         calculable: false,
@@ -89,14 +116,13 @@ function setMap() {
         animation: false,
         effect: {
           show: true,
-          period: 8, //箭头指向速度，值越小速度越快
-          trailLength: 0.4, //特效尾迹长度[0,1]值越大，尾迹越长重
+          period: 3, //箭头指向速度，值越小速度越快
+          trailLength: 0.7, //特效尾迹长度[0,1]值越大，尾迹越长重
           symbol: "arrow", //箭头图标
-          symbolSize: 7, //图标大小
+          symbolSize: 3, //图标大小
         },
         lineStyle: {
-          width: 1.5, //尾迹线条宽度
-          opacity: 0.4,
+          opacity: 0,
           curveness: 0.3, //尾迹线条曲直度
         },
         data: geoData.map((item) => {
@@ -126,7 +152,10 @@ function setMap() {
         tooltip: {
           formatter: (params: any) => {
             const { data } = params;
-            return `${data[2]}被攻击${data[data.length - 1]}次`;
+            return `${data[2]}被攻击<span style='color:red'>${
+              data[data.length - 1]
+            }</span>
+            次`;
           },
           textStyle: {
             color: "#6eddf1",
@@ -146,10 +175,10 @@ function setMap() {
   showToolTip(myChart);
 }
 async function showToolTip(myChart: echarts.ECharts) {
-  const data = (myChart.getOption() as any)?.series?.[1].data;
-  const length = data.length;
   let i = 0;
   while (i >= 0) {
+    const data = (myChart.getOption() as any)?.series?.[1].data;
+    const length = data.length;
     i %= length;
     if (data[i][3] > 0) {
       await new Promise((res) => {
@@ -170,5 +199,6 @@ async function showToolTip(myChart: echarts.ECharts) {
 <style lang="less" scoped>
 .chinaMap {
   height: 100%;
+  color: rgb(255, 196, 0);
 }
 </style>

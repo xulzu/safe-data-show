@@ -4,6 +4,9 @@ export const mapData = [
   {
     fromName: "贵阳",
     from: [106.71, 26.57],
+    fromCountry: "中国",
+    toCountry: "中国",
+
     to: [113, 28.21],
     toName: "长沙",
     value: 171,
@@ -14,6 +17,8 @@ export const mapData = [
     to: [113.23, 23.16],
     toName: "广州",
     value: 171,
+    fromCountry: "中国",
+    toCountry: "中国",
   },
   {
     fromName: "贵阳",
@@ -21,6 +26,8 @@ export const mapData = [
     to: [116.7, 39.53],
     toName: "廊坊",
     value: 171,
+    fromCountry: "中国",
+    toCountry: "中国",
   },
   {
     fromName: "贵阳",
@@ -28,6 +35,8 @@ export const mapData = [
     to: [117.27, 31.86],
     toName: "合肥",
     value: 171,
+    fromCountry: "中国",
+    toCountry: "中国",
   },
   {
     fromName: "合肥",
@@ -35,12 +44,16 @@ export const mapData = [
     to: [125.03, 46.58],
     toName: "大庆",
     value: 229,
+    fromCountry: "中国",
+    toCountry: "中国",
   },
   {
     fromName: "合肥",
     from: [117.27, 31.86],
     to: [115.480656, 35.23375],
     toName: "菏泽",
+    fromCountry: "中国",
+    toCountry: "中国",
     value: 229,
   },
   {
@@ -49,34 +62,36 @@ export const mapData = [
     to: [107.15, 34.38],
     toName: "宝鸡",
     value: 194,
+    fromCountry: "中国",
+    toCountry: "中国",
   },
+
   {
-    fromName: "菏泽1",
-    from: [0, 0],
-    to: [107.15, 34.38],
-    toName: "宝鸡",
-    value: 100,
-  },
-  {
-    fromName: "菏泽14",
-    from: [139.42353, 37.16812],
-    to: [121.45918, 31.2372],
-    toName: "宝鸡",
-    value: 100,
-  },
-  {
-    fromName: "菏泽13",
+    fromName: "美国",
+    fromCountry: "美国",
+    toCountry: "中国",
     from: [-109.69796 + 360, 39.79028],
     to: [121.45918, 31.2372],
-    toName: "宝鸡",
+    toName: "上海",
     value: 300,
   },
   {
-    fromName: "菏泽12",
+    fromName: "巴西",
+    fromCountry: "巴西",
+    toCountry: "中国",
     from: [-56.02942 + 360, -10.70531],
     to: [121.45918, 31.2372],
-    toName: "宝鸡",
+    toName: "上海",
     value: 500,
+  },
+  {
+    fromName: "马达加斯加",
+    fromCountry: "马达加斯加",
+    toCountry: "中国",
+    from: [47.08301056835936, -19.65235624472773],
+    to: [121.45918, 31.2372],
+    toName: "上海",
+    value: 100,
   },
 ];
 export const lineData = [

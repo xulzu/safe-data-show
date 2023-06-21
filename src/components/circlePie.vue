@@ -58,7 +58,7 @@ function setChart() {
       {
         text: "在线数目",
         left: "center",
-        bottom: -7,
+        bottom: -5,
         textStyle: {
           color: "#6eddf1",
           fontSize: 14,
