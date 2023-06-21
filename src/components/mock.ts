@@ -94,7 +94,7 @@ export const lineData = [
 export const pieData = [
   //
   ...Mock.mock({
-    "arr|7": [
+    "arr|5": [
       {
         domain: "@domain",
         value: "@natural(40,70)",

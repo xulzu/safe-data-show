@@ -60,10 +60,10 @@ function setMap() {
         type: "continuous",
         min: 0,
         max: Math.max(
-          ...convertData(mapData).map((item) => item.at(-1) as number)
+          ...convertData(mapData).map((item) => item[item.length - 1] as number)
         ),
-        left: "left",
-        top: "bottom",
+        left: 15,
+        bottom: 10,
         show: true,
         itemWidth: 5,
         itemHeight: 50,
@@ -89,10 +89,10 @@ function setMap() {
         animation: false,
         effect: {
           show: true,
-          period: 3, //箭头指向速度，值越小速度越快
-          trailLength: 0.1, //特效尾迹长度[0,1]值越大，尾迹越长重
+          period: 8, //箭头指向速度，值越小速度越快
+          trailLength: 0.4, //特效尾迹长度[0,1]值越大，尾迹越长重
           symbol: "arrow", //箭头图标
-          symbolSize: 6, //图标大小
+          symbolSize: 7, //图标大小
         },
         lineStyle: {
           width: 1.5, //尾迹线条宽度
@@ -126,7 +126,7 @@ function setMap() {
         tooltip: {
           formatter: (params: any) => {
             const { data } = params;
-            return `${data[2]}被攻击${data?.at(-1)}次`;
+            return `${data[2]}被攻击${data[data.length - 1]}次`;
           },
           textStyle: {
             color: "#6eddf1",
@@ -155,7 +155,7 @@ async function showToolTip(myChart: echarts.ECharts) {
       await new Promise((res) => {
         setTimeout(() => {
           res(0);
-        }, 1000);
+        }, 3000);
       });
       myChart.dispatchAction({
         type: "showTip",
@@ -170,6 +170,5 @@ async function showToolTip(myChart: echarts.ECharts) {
 <style lang="less" scoped>
 .chinaMap {
   height: 100%;
-  color: #2911c5;
 }
 </style>

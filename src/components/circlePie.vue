@@ -45,14 +45,28 @@ const $el = ref();
 const random = -Math.floor(Math.random() * 60);
 function setChart() {
   const option = {
-    title: {
-      text: "501",
-      left: "center",
-      top: "center",
-      textStyle: {
-        color: "#fff",
-        fontSize: 22,
+    title: [
+      {
+        text: "501",
+        left: "center",
+        top: "center",
+        textStyle: {
+          color: "#fff",
+          fontSize: 22,
+        },
       },
+      {
+        text: "在线数目",
+        left: "center",
+        bottom: -7,
+        textStyle: {
+          color: "#6eddf1",
+          fontSize: 14,
+        },
+      },
+    ],
+    grid: {
+      bottom: 20,
     },
     series: [
       // 外面100圆环

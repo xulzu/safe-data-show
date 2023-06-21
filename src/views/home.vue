@@ -27,14 +27,18 @@
     <span style="width: 48%; height: 100%">
       <div class="main-title">恶意攻击可视化平台</div>
       <div style="position: relative; width: 100%; height: 60%">
+        <border style="margin-top: -22px"></border>
+        <border position="right-top" style="margin-top: -22px"></border>
+        <border position="left-bottom" style="margin-bottom: -10px"></border>
+        <border position="right-bottom" style="margin-bottom: -10px"></border>
+
         <chinaMap></chinaMap>
-        <!-- <earth></earth> -->
       </div>
       <div style="width: 100%; height: calc(40% - 60px)">
         <realTimeAttackIPScroll></realTimeAttackIPScroll>
       </div>
     </span>
-    <span style="width: 26%">
+    <span style="width: calc(26% - 5px)">
       <div class="right1" style="height: 40%; width: 100%">
         <span class="title"><span class="title-text">应用数据</span></span>
 
@@ -89,6 +93,7 @@ import colBar from "@/components/colBar.vue";
 import attackIPScroll from "@/components/attackIPScroll.vue";
 import typewriterNotice from "@/components/typewriterNotice.vue";
 import earth from "@/components/earth.vue";
+import border from "../components/border.vue";
 </script>
 <style lang="less" scoped>
 span {
@@ -99,6 +104,7 @@ span {
   width: 100%;
   height: 100%;
   background-color: #03044a;
+  overflow: hidden;
 }
 .left {
   width: 100%;
@@ -123,6 +129,7 @@ span {
 .main-title {
   width: 100%;
   padding: 2px;
+  box-sizing: border-box;
   text-align: center;
   color: #75deef;
   font-size: 30px;
@@ -144,11 +151,12 @@ span {
 
   .title-text {
     position: relative;
+    line-height: 23px;
     font-size: 16px;
     background: #151456;
     display: inline-block;
-    padding: 0 4px;
-    transform: translateY(-3px);
+    padding: 0px 4px;
+    transform: translateY(-2px);
   }
 }
 .cirle {
